@@ -15,19 +15,28 @@ public class Ex9 {
 		double somaAltura = 0;
 		int qtdAtletas = 0;
 
+		// Inicialização para comparação:
+		// menor valor possível → qualquer altura será maior que isso
 		double alturaAtletaMaisAlto = Double.MIN_VALUE;
+
+		// maior valor possível → qualquer altura será menor que isso
 		double alturaAtletaMaisBaixo = Double.MAX_VALUE;
 
 		String nrAtletaMaisAlto = "";
 		String nrAtletaMaisBaixo = "";
 
+		// Continua enquanto o número de inscrição NÃO for "0"
 		while (!numeroInscricao.equals("0")) {
 
+			// Se a altura atual for maior que a maior já registrada,
+			// atualiza o "recorde"
 			if (altura > alturaAtletaMaisAlto) {
 				alturaAtletaMaisAlto = altura;
 				nrAtletaMaisAlto = numeroInscricao;
 			}
 
+			// Se a altura atual for menor que a menor já registrada,
+			// atualiza o "recorde"
 			if (altura < alturaAtletaMaisBaixo) {
 				alturaAtletaMaisBaixo = altura;
 				nrAtletaMaisBaixo = numeroInscricao;
